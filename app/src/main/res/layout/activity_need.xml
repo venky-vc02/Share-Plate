@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".NeedActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFC3A0"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/need_food_btn"
+                android:textAlignment="center"
+                android:layout_centerInParent="true"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                tools:ignore="RelativeOverlap" />
+
+            <ImageButton
+                android:id="@+id/btn_logout_need"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_logout"
+                android:contentDescription="@string/logout" />
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/needFoodList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolBar2"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:visibility="visible"
+        tools:listitem="@layout/item_food_receive" />
+
+    <TextView
+        android:id="@+id/needNoListTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/no_listing_found"
+        android:visibility="gone"
+        android:textAlignment="center"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AddFoodList">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/afc_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#A0FFC9"
+        android:layout_alignParentTop="true"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_food_listing"
+                android:textAlignment="center"
+                android:layout_centerInParent="true"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                tools:ignore="RelativeOverlap" />
+
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/afc_input1"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/afc_toolbar"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="30dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/add_reason"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/reason_for_listing"
+            android:imeOptions="actionNext"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            android:inputType="text"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:id="@+id/afc_input2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_below="@id/afc_input1"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/add_date"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/select_date"
+                android:focusable="false"
+                android:autofillHints="AUTOFILL_TYPE_DATE"
+                android:imeOptions="actionNext"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:inputType="text"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/add_time"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/select_time"
+                android:focusable="false"
+                android:autofillHints="AUTOFILL_TYPE_DATE"
+                android:imeOptions="actionNext"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:inputType="text"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/afc_input3"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/afc_input2"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="15dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/add_location"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/location_hint"
+            android:autofillHints="postalAddress"
+            android:imeOptions="actionNext"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            android:inputType="text"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/afc_toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/afc_input3"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/list_food_items"
+                android:textSize="15sp"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                tools:ignore="RelativeOverlap" />
+
+            <ImageButton
+                android:id="@+id/add_food_inputBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:tint="@color/black"
+                android:src="@android:drawable/ic_input_add"
+                android:layout_alignParentEnd="true"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/add_food_listing" />
+        </RelativeLayout>
+
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/add_food_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_below="@id/afc_toolbar2"
+        android:layout_above="@id/afc_add_order"
+        tools:listitem="@layout/item_add_food"
+        android:layout_marginEnd="20dp"/>
+
+    <Button
+        android:id="@+id/afc_add_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
+        android:textColor="@color/btn_txt_color"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:drawableTint="@color/white"
+        android:drawableStart="@android:drawable/ic_input_add"
+        android:background="@drawable/button_share"
+        android:text="@string/add_food"/>
+
+
+</RelativeLayout>

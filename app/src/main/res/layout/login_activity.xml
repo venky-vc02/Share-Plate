@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:textAlignment="center"
+        android:textSize="14pt"
+        android:textStyle="bold"
+        android:text="@string/app_welcome_name"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/login_header"
+        android:contentDescription="@string/login_header" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="@string/app_description"/>
+
+    <Button
+        android:id="@+id/btnShare"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/btn_txt_color"
+        android:textStyle="bold"
+        android:background="@drawable/button_share"
+        android:text="@string/share_food_btn"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/btnReceive"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/btn_txt_color"
+        android:textStyle="bold"
+        android:background="@drawable/button_receive"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="@string/need_food_btn"
+        android:textAllCaps="false"/>
+</LinearLayout>

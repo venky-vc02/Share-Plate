@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_item"
+    android:layout_marginBottom="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:src="@drawable/receive_img"
+            android:padding="10dp"
+            android:background="#BFE5FF"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp">
+
+            <TextView
+                android:id="@+id/rText_reason"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Party Food Leftover"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/rText_owner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/trail"
+                android:drawableStart="@drawable/share"
+                android:drawablePadding="5dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                tools:ignore="UseCompatTextViewDrawableXml" />
+
+            <TextView
+                android:id="@+id/rText_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Feb 16th 2024, 16:04 PM (IST)"
+                android:drawableStart="@drawable/time"
+                android:drawablePadding="5dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                tools:ignore="UseCompatTextViewDrawableXml" />
+
+            <TextView
+                android:id="@+id/rText_people_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="For 4 People"
+                android:drawableStart="@drawable/people"
+                android:drawablePadding="5dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                tools:ignore="UseCompatTextViewDrawableXml" />
+
+            <TextView
+                android:id="@+id/rText_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="abcd, 1st Street, Madhaput, Hyderbase, Telengana"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:drawableStart="@drawable/location"
+                android:drawablePadding="5dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                tools:ignore="UseCompatTextViewDrawableXml" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:id="@+id/rOrder_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/request_order"
+                    android:textColor="@android:color/holo_green_light"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

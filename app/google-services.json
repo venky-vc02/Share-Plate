@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "1022757077780",
+    "firebase_url": "https://shareplate-a68f6-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "shareplate-a68f6",
+    "storage_bucket": "shareplate-a68f6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1022757077780:android:090ad509bda6fb5b493801",
+        "android_client_info": {
+          "package_name": "com.training.shareplate"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFjN4g6wY1cLz6iUMMpNJoI8AwvYAdyPg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
